@@ -55,10 +55,7 @@ while (!Raylib.WindowShouldClose())
 
     // Raylib.DrawCircle(400, 300, 50, Color.Black);
 
-    Raylib.DrawTexture(booltruetruefalse,
-        (int)booltruetruefalserect.X,
-        (int)booltruetruefalserect.Y
-    , Color.White);
+    Raylib.DrawTexture(booltruetruefalse,(int)booltruetruefalserect.X,(int)booltruetruefalserect.Y,Color.White);
 
     Raylib.EndDrawing();
     // "flippar" byter
