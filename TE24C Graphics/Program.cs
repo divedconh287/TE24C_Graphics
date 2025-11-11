@@ -10,7 +10,7 @@ Rectangle booltruetruefalserect = new(
 400, 300, booltruetruefalse.Dimensions
 );
 
-Vector2 pos = new(400, 300);
+// Vector2 pos = new(400, 300);
 // 2 = 2 dimensionell vektor
 float speed = 4;
 // hastighet
@@ -33,29 +33,32 @@ while (!Raylib.WindowShouldClose())
     // if (Raylib.IsKeyDown(KeyboardKey.Up)) pos.Y -= speed;
     // samma fast andra hållet
 
-        if (Raylib.IsKeyDown(KeyboardKey.Right)) booltruetruefalserect.X += speed;   
-        if (Raylib.IsKeyDown(KeyboardKey.Left)) booltruetruefalserect.X -= speed;
-        if (Raylib.IsKeyDown(KeyboardKey.Down)) booltruetruefalserect.Y += speed;
-        if (Raylib.IsKeyDown(KeyboardKey.Up)) booltruetruefalserect.Y -= speed;
+    if (Raylib.IsKeyDown(KeyboardKey.Right)) booltruetruefalserect.X += speed;
+    if (Raylib.IsKeyDown(KeyboardKey.Left)) booltruetruefalserect.X -= speed;
+    if (Raylib.IsKeyDown(KeyboardKey.Down)) booltruetruefalserect.Y += speed;
+    if (Raylib.IsKeyDown(KeyboardKey.Up)) booltruetruefalserect.Y -= speed;
 
-            if (booltruetruefalserect.X < 0) booltruetruefalserect.X += speed;
-            if (booltruetruefalserect.X + booltruetruefalserect.Width > 800) booltruetruefalserect.X -= speed;
-            if (booltruetruefalserect.Y < 0) booltruetruefalserect.Y += speed;
-            if (booltruetruefalserect.Y + booltruetruefalserect.Height > 600) booltruetruefalserect.Y -= speed;
-            
-                
+    if (booltruetruefalserect.X < 0) booltruetruefalserect.X += speed;
+    if (booltruetruefalserect.X + booltruetruefalserect.Width > 800) booltruetruefalserect.X -= speed;
+    if (booltruetruefalserect.Y < 0) booltruetruefalserect.Y += speed;
+    if (booltruetruefalserect.Y + booltruetruefalserect.Height > 600) booltruetruefalserect.Y -= speed;
+
+
 
     Raylib.BeginDrawing();
     // förbereder, ritar
 
     Raylib.ClearBackground(Color.Pink);
-    Raylib.DrawCircleV(pos, 100, Color.Black);
+    // Raylib.DrawCircleV(pos, 100, Color.Black);
     // Raylib.DrawCircle(200, 200, 100, Color.Black);
     // de övre två är samma
 
     // Raylib.DrawCircle(400, 300, 50, Color.Black);
 
-    Raylib.DrawTextureV(booltruetruefalse, position, Color.White);
+    Raylib.DrawTexture(booltruetruefalse,
+        (int)booltruetruefalserect.X,
+        (int)booltruetruefalserect.Y
+    , Color.White);
 
     Raylib.EndDrawing();
     // "flippar" byter
