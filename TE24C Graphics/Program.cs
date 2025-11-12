@@ -4,7 +4,7 @@ using System.Numerics;
 Raylib.InitWindow(800, 600, "Hej TE24C");
 Raylib.SetTargetFPS(60);
 
-Texture2D booltruetruefalse = Raylib.LoadTexture("booltrue.png");
+Texture2D booltruetruefalse = Raylib.LoadTexture("booltruesmall.png");
 
 Rectangle booltruetruefalserect = new(
 400, 300, booltruetruefalse.Dimensions
